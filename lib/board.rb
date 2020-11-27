@@ -2,8 +2,8 @@ require 'pry'
 class Board
     attr_accessor :cells
 
-    def initialize(cells = nil)
-        @cells = cells || Array.new(9, " ")
+    def initialize
+        reset!
     end
     
     def reset!
@@ -19,7 +19,7 @@ class Board
     end
 
     def position(input)
-        @cells[input.to_i-1]
+        cells[input.to_i-1]
         # display
     end
 
